@@ -5,7 +5,7 @@
    - 새 버전 배포 시 CACHE_VERSION만 올리면 기존 캐시가 정리됨
 */
 
-const CACHE_VERSION = 'vte-v39';
+const CACHE_VERSION = 'vte-v40';
 const APP_SHELL = [
   './',
   './index.html',

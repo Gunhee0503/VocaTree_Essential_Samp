@@ -635,13 +635,15 @@
     box-shadow:0 8px 22px -10px rgba(184,137,59,.4)}
   .lcard.current{background:linear-gradient(145deg,rgba(184,137,59,.10),rgba(184,137,59,.02));
     border-left-color:var(--gold);border-left-width:7px}
-  .lcard.locked{border-left-color:var(--line);opacity:.7;cursor:pointer}
-  .lcard.locked:active{transform:scale(.99)}
-  .lcard.locked:hover{border-color:var(--gold);opacity:.82}
+  .lcard.locked{border-left-color:var(--line);opacity:.55;cursor:default}
   .lcard-no{font-family:'Space Mono',monospace;font-size:11px;color:var(--gold);
     font-weight:700;letter-spacing:2px;margin-bottom:8px}
   .lcard.locked .lcard-no{color:#9a8a70}
   .lcard.current .lcard-no{color:var(--gold)}
+  .lcard-sample{display:inline-block;background:var(--gold);color:#fff;
+    font-family:'Space Mono',monospace;font-size:9px;font-weight:700;
+    letter-spacing:1px;padding:2px 7px;border-radius:20px;margin-left:6px;
+    vertical-align:middle}
   .lcard-root{font-family:'Fraunces',serif;font-weight:900;font-size:38px;
     color:var(--ink);letter-spacing:-1px;line-height:1}
   .lcard-mean{font-family:'Fraunces',serif;font-style:italic;font-weight:600;
@@ -656,79 +658,6 @@
     font-weight:700;letter-spacing:1.5px}
   .lcard-lock{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);
     font-family:'Space Mono',monospace;font-size:11px;color:#9a8a70;letter-spacing:1px}
-  .lessons-cta{margin-top:22px;width:100%;background:none;border:1.5px dashed var(--line);
-    border-radius:50px;padding:15px;font-family:'Space Mono',monospace;font-size:12px;
-    font-weight:700;letter-spacing:2px;color:var(--gold);cursor:pointer;text-transform:uppercase;
-    transition:all .18s}
-  .lessons-cta:active{transform:scale(.99)}
-  .lessons-cta:hover{border-color:var(--gold);background:rgba(184,137,59,.05)}
-
-  /* ===== 잠긴 강 안내 (Lock) ===== */
-  #s-lock{display:none;flex-direction:column;
-    background:linear-gradient(170deg, var(--paper) 0%, var(--paper2) 100%)}
-  #s-lock.on{display:flex}
-  .lock-wrap{flex:1;display:flex;flex-direction:column;align-items:center;
-    text-align:center;justify-content:center;
-    padding:40px 30px calc(40px + env(safe-area-inset-bottom));gap:8px;min-height:0}
-  .lock-badge{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:5px;
-    color:var(--gold);font-weight:700;padding:7px 16px;border:1px solid var(--gold);
-    border-radius:30px;background:rgba(184,137,59,.06);margin-bottom:6px}
-  .lock-icon{font-size:46px;margin:8px 0 2px}
-  .lock-lesson{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;
-    color:#9a8a70;font-weight:700}
-  .lock-root{font-family:'Fraunces',serif;font-weight:900;font-size:64px;color:var(--ink);
-    letter-spacing:-2px;line-height:1.05}
-  .lock-mean{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:22px;
-    color:var(--gold)}
-  .lock-title{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--ink);
-    margin-top:20px}
-  .lock-desc{font-family:'Gowun Batang',serif;font-size:14px;color:#5c4e3c;line-height:1.7;
-    margin-top:10px;max-width:340px}
-  .lock-bottom{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:28px}
-  .lock-cta{background:var(--ink);color:var(--paper);border:none;border-radius:50px;
-    padding:17px 52px;font-family:'Space Mono',monospace;font-size:13px;font-weight:700;
-    letter-spacing:3px;cursor:pointer;text-transform:uppercase;
-    box-shadow:0 10px 28px -8px rgba(40,28,16,.4);transition:transform .15s}
-  .lock-cta:active{transform:scale(.97)}
-  .lock-skip{font-family:'Space Mono',monospace;font-size:11px;color:#9a8a70;cursor:pointer;
-    letter-spacing:1px;padding:8px}
-  .lock-skip:active{color:var(--gold)}
-
-  /* ===== 정식판 안내 (CTA) ===== */
-  #s-cta{display:none;flex-direction:column;
-    background:linear-gradient(165deg,#2a2018 0%,#1c150e 100%);color:var(--paper)}
-  #s-cta.on{display:flex}
-  .cta-wrap{flex:1;display:flex;flex-direction:column;
-    padding:32px 28px calc(36px + env(safe-area-inset-bottom));min-height:0}
-  .cta-top{display:flex;justify-content:center;padding-top:14px}
-  .cta-badge{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:5px;
-    color:var(--gold);font-weight:700;padding:7px 16px;border:1px solid rgba(184,137,59,.5);
-    border-radius:30px;background:rgba(184,137,59,.10)}
-  .cta-body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px;
-    padding:24px 0}
-  .cta-kicker{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:3px;
-    color:var(--gold);text-transform:uppercase}
-  .cta-title{font-family:'Fraunces',serif;font-weight:900;font-size:40px;line-height:1.08;
-    color:var(--paper);letter-spacing:-1px;margin-top:6px}
-  .cta-sub{font-family:'Gowun Batang',serif;font-size:14px;color:#d6c4a8;line-height:1.7;
-    margin-top:12px}
-  .cta-list{margin-top:24px;display:flex;flex-direction:column;gap:13px}
-  .cta-li{font-family:'Gowun Batang',serif;font-size:14px;color:#ece0cd;line-height:1.4;
-    display:flex;gap:10px;align-items:flex-start}
-  .cta-ck{color:#7fb37e;font-weight:700;font-family:'Space Mono',monospace}
-  .cta-bottom{display:flex;flex-direction:column;align-items:center;gap:14px}
-  .cta-go{width:100%;background:var(--gold);color:#241c14;border:none;border-radius:50px;
-    padding:18px;font-family:'Space Mono',monospace;font-size:13px;font-weight:700;
-    letter-spacing:3px;cursor:pointer;text-transform:uppercase;
-    box-shadow:0 12px 30px -8px rgba(184,137,59,.5);transition:transform .15s}
-  .cta-go:active{transform:scale(.98)}
-  .cta-back{font-family:'Space Mono',monospace;font-size:11px;color:#9a8a70;cursor:pointer;
-    letter-spacing:1px;padding:8px}
-  .cta-back:active{color:var(--gold)}
-  @media (max-height:720px){
-    .cta-title{font-size:32px}
-    .lock-root{font-size:52px}
-  }
 
   /* ===== 1강 표지 (Cover) ===== */
   #s-cover{display:none;flex-direction:column;
@@ -1091,51 +1020,6 @@
         <div class="lessons-sub">원하는 어근을 골라 학습을 시작하세요</div>
       </div>
       <div class="lessons-grid" id="lessonsGrid"></div>
-      <button class="lessons-cta" onclick="showSampleCta()">전체 버전 안내 보기 ›</button>
-    </div>
-  </section>
-
-  <!-- LOCK (잠긴 강 안내) -->
-  <section class="screen" id="s-lock">
-    <div class="lock-wrap">
-      <div class="lock-badge">SAMPLE</div>
-      <div class="lock-icon">🔒</div>
-      <div class="lock-lesson" id="lockLesson">LESSON 02</div>
-      <div class="lock-root" id="lockRoot">sta-/sist-</div>
-      <div class="lock-mean" id="lockMean">to stand</div>
-      <div class="lock-title">이 강의는 정식판에서 열립니다</div>
-      <div class="lock-desc">지금 보고 계신 건 <b>맛보기 샘플</b>이에요.<br>
-        Lesson 1은 어원 트리부터 실전 문제까지 전부 무료로 체험할 수 있고,<br>
-        나머지 강의는 정식판에서 만나보실 수 있습니다.</div>
-      <div class="lock-bottom">
-        <button class="lock-cta" onclick="showSampleCta()">전체 버전 안내 ›</button>
-        <div class="lock-skip" onclick="showLessons()">강의 목록으로</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA (정식판 안내 / 마무리) -->
-  <section class="screen" id="s-cta">
-    <div class="cta-wrap">
-      <div class="cta-top">
-        <div class="cta-badge">FULL VERSION</div>
-      </div>
-      <div class="cta-body">
-        <div class="cta-kicker">맛보기는 여기까지!</div>
-        <div class="cta-title">보카트리 Essential<br>정식판</div>
-        <div class="cta-sub">어원 하나로 수십 개의 단어가 한 번에 연결됩니다.<br>
-          per‑, sta‑/sist‑, tenēre … 그 이상의 어근까지.</div>
-        <div class="cta-list">
-          <div class="cta-li"><span class="cta-ck">✓</span> 모든 강의 어원 트리 · 의미 분류 전체 해제</div>
-          <div class="cta-li"><span class="cta-ck">✓</span> Part 1·2·3 실전 문제 풀세트</div>
-          <div class="cta-li"><span class="cta-ck">✓</span> 오프라인 학습 (PWA · 설치형)</div>
-          <div class="cta-li"><span class="cta-ck">✓</span> 새 어근 강의 지속 업데이트</div>
-        </div>
-      </div>
-      <div class="cta-bottom">
-        <button class="cta-go" onclick="ctaPrimary()">정식판 알아보기 ›</button>
-        <div class="cta-back" onclick="showLessons()">샘플 더 둘러보기</div>
-      </div>
     </div>
   </section>
 
@@ -1392,20 +1276,20 @@ const LESSON3_CLSDATA = {"contain": ["포함하다, 함유하다 / (감정·확�
    강을 추가할 때: (1) LESSONn_META, LESSONn_DATA 등을 정의하고
    (2) 아래 LESSONS 객체에 등록. 그러면 강 선택 화면·표지·트리·실전문제가 자동으로 반영됨.
    준비 안 된 강은 status:'coming'으로 두면 자물쇠로 표시됨. */
-let currentLessonNo = 1;
+let currentLessonNo = 3;
 function LESSONS_get(no){ return (typeof LESSONS!=='undefined') ? LESSONS[no] : null; }
 function LESSON(){ const L=LESSONS_get(currentLessonNo); return L?L.meta:{no:1,root:'per-',meaning:'through',ko:''}; }
 const LESSON1_META = {
   no: 1, root: 'per-', meaning: 'through',
-  ko: '처음부터 끝까지 쭉~ 통과하는', status: 'ready'
+  ko: '처음부터 끝까지 쭉~ 통과하는', status: 'coming'
 };
 const LESSON2_META = {
   no: 2, root: 'sta-/sist-', meaning: 'to stand, make or be firm',
-  ko: '세우다, 단단하게 만들다', status: 'locked'
+  ko: '세우다, 단단하게 만들다', status: 'coming'
 };
 const LESSON3_META = {
   no: 3, root: 'tenēre', meaning: 'to hold, to keep',
-  ko: '잡다, 잡고 있다', status: 'locked'
+  ko: '잡다, 잡고 있다', status: 'ready', sample: true
 };
 const LESSON1_EXTRA = [];
 const LESSON2_EXTRA = [];
@@ -1425,11 +1309,11 @@ const LESSONS = {
   3: { meta: LESSON3_META, data: LESSON3_DATA, classify: LESSON3_CLSDATA, bridge2: LESSON3_BRIDGE2, bridge: LESSON3_BRIDGE, extra: LESSON3_EXTRA },
 };
 /* 화면 코드가 참조하는 전역 별칭. switchLesson(n)이 호출되면 이 변수들이 갱신됨. */
-let DATA = LESSON1_DATA;
-let CLSDATA = LESSON1_CLSDATA;
-let BRIDGE = LESSON1_BRIDGE;
-let BRIDGE2 = LESSON1_BRIDGE2;
-let EXTRAQ = LESSON1_EXTRA;
+let DATA = LESSON3_DATA;
+let CLSDATA = LESSON3_CLSDATA;
+let BRIDGE = LESSON3_BRIDGE;
+let BRIDGE2 = LESSON3_BRIDGE2;
+let EXTRAQ = LESSON3_EXTRA;
 
 function switchLesson(no){
   const L = LESSONS[no];
@@ -1721,7 +1605,6 @@ function markPartDone(part,pct){
   d[part]=Math.max(d[part]||0, Math.round(pct));
   _partMem=d;
   try{ localStorage.setItem(partKey(), JSON.stringify(d)); }catch(e){}
-  try{ maybeSampleEnd(); }catch(e){}
 }
 /* 의미분류퀴즈 통과 여부 (실전문제 잠금 해제 조건) */
 function isClassifyCleared(){
@@ -2601,9 +2484,7 @@ function go(s){
   document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
   // 인트로일 땐 하단 네비 숨김
   const navEl=document.querySelector('nav');
-  if(navEl) navEl.style.display = (s==='intro' || s==='cover' || s==='lessons' || s==='lock' || s==='cta') ? 'none' : '';
-  const hdrEl=document.querySelector('header');
-  if(hdrEl) hdrEl.style.display = (s==='cta') ? 'none' : '';
+  if(navEl) navEl.style.display = (s==='intro' || s==='cover' || s==='lessons') ? 'none' : '';
   if(s==='tree'){document.getElementById('nav-tree').classList.add('active');
     document.documentElement.style.setProperty('--gold','#b8893b');updateRings();
     updateConceptCta();}
@@ -2752,16 +2633,15 @@ function renderLessons(){
       }catch(e){}
     }
     const isCurrent = (no===currentLessonNo && ready);
-    const onclickAttr = ready ? `onclick="pickLesson(${m.no})"` : `onclick="showLocked(${m.no})"`;
     html += `
-      <button class="lcard ${ready?'':'locked'} ${isCurrent?'current':''}" ${onclickAttr}>
-        <div class="lcard-no">LESSON ${pad}${isCurrent?' · 현재':''}</div>
+      <button class="lcard ${ready?'':'locked'} ${isCurrent?'current':''}" ${ready?`onclick="pickLesson(${m.no})"`:'disabled'}>
+        <div class="lcard-no">LESSON ${pad}${isCurrent?' · 현재':''}${m.sample?' <span class="lcard-sample">맛보기</span>':''}</div>
         <div class="lcard-root">${m.root}</div>
         <div class="lcard-mean">${m.meaning}</div>
         <div class="lcard-ko">${m.ko||''}</div>
         ${ready
           ? `<div class="lcard-progress">${doneCount>0?`<span class="lcp-badge">✓ ${doneCount}/3 완료</span>`:`<span class="lcp-todo">시작하기 ›</span>`}</div>`
-          : `<div class="lcard-lock">🔒 정식판 전용</div>`}
+          : `<div class="lcard-lock">🔒 맛보기 버전 제한</div>`}
       </button>`;
   });
   grid.innerHTML=html;
@@ -2772,36 +2652,6 @@ function pickLesson(no){
   let coverSeen=false;
   try{ coverSeen = localStorage.getItem('vte_cover_seen_lesson'+no)==='1'; }catch(e){}
   if(coverSeen) go('tree'); else showCover();
-}
-
-/* ===== 맛보기 샘플: 잠긴 강 안내 + 정식판 CTA ===== */
-function showLocked(no){
-  const L=LESSONS[no];
-  if(!L) return;
-  const m=L.meta;
-  const pad=String(m.no).padStart(2,'0');
-  const el=id=>document.getElementById(id);
-  if(el('lockLesson')) el('lockLesson').textContent='LESSON '+pad;
-  if(el('lockRoot')) el('lockRoot').textContent=m.root;
-  if(el('lockMean')) el('lockMean').textContent=m.meaning;
-  go('lock');
-}
-function showSampleCta(){ go('cta'); }
-function ctaPrimary(){
-  /* TODO: 정식판 구매/안내 링크로 교체 (예: window.open('https://...')) */
-  showLessons();
-}
-/* 1강을 끝까지(3개 Part 모두 80%+) 완료하면 자동으로 마무리 CTA 노출 (1회) */
-function maybeSampleEnd(){
-  if(currentLessonNo!==1) return;
-  const d=getPartDone();
-  const allDone=['p1','p2','p3'].every(p=>(d[p]||0)>=80);
-  if(!allDone) return;
-  let seen=false;
-  try{ seen=localStorage.getItem('vte_sample_cta_seen')==='1'; }catch(e){}
-  if(seen) return;
-  try{ localStorage.setItem('vte_sample_cta_seen','1'); }catch(e){}
-  setTimeout(showSampleCta, 900);
 }
 
 /* ===== 강 메타 적용 ===== */
